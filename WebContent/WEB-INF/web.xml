@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:web="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name>mcba</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <filter>
+    <filter-name>charsetFilter</filter-name>
+    <filter-class>cn.maiba.filter.CharsetFilter</filter-class>
+    <init-param>
+      <param-name>requestEncoding</param-name>
+      <param-value>utf-8</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>charsetFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+    <dispatcher>REQUEST</dispatcher>
+    <dispatcher>RESPONSE</dispatcher>
+    <dispatcher>FORWARD</dispatcher>
+    <dispatcher>INCLUDE</dispatcher>
+  </filter-mapping>
+  
+  <listener>
+      <listener-class>cn.maiba.listener.SessionListener</listener-class>
+  </listener>
+  <listener>
+      <listener-class>cn.maiba.listener.OnlineUser</listener-class>
+  </listener>
+  
+  <servlet>
+    <servlet-name>servImageVal</servlet-name>
+    <servlet-class>cn.maiba.util.ServImageVal</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>servImageVal</servlet-name>
+    <url-pattern>/servImageVal</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>notice</servlet-name>
+    <servlet-class>cn.maiba.control.NoticeControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>notice</servlet-name>
+    <url-pattern>/notice</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>dispatcher</servlet-name>
+    <servlet-class>cn.maiba.control.Dispatcher</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>dispatcher</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  
+
+</web-app>

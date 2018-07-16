@@ -1,0 +1,40 @@
+@CHARSET "UTF-8";
+.footer {
+	background-color: #eee;
+	text-align: right;
+	margin: 2px;
+}
+.header {
+	margin: 5px;
+	text-align: right;
+}
+.toolbar {
+	background-color: #eee;
+}
+.menu{
+	text-align: right;
+	float: right;
+}
+.content {
+	margin: 10px; 
+}
+.register {
+	margin: auto;
+	border:1 blue;
+	align: center;
+	cellspacing: 1;
+	cellpadding:2;
+	background-color: #00ffff;
+}
+.userList-tb {
+	margin: auto;
+	cellspacing: 1;
+	cellpadding:2;
+}
+.userList-tb th {
+	background-color: #0080ff;
+}
+
+.bg {
+	background-color: #00ffff;
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Context>
+    <Rescource name="dbpool"
+        type = "javax.sql.DataSource"
+        auth = "Container"
+        driverClassName = "com.mysql.jdbc.Driver"
+        url = "jdbc:mysql://localhost:3306/db_maiba"
+        username = "root"
+        password = "root"
+        maxActive = "5"
+        maxIdle = "2"
+        maxWait = "6000" />
+</Context>
